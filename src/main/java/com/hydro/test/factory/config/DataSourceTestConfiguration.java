@@ -36,6 +36,7 @@ import com.hydro.test.factory.globals.GlobalsTest;
  * @author Sam Butler
  * @since April 25, 2022
  */
+@Lazy
 @Configuration
 @EnableTransactionManagement
 public class DataSourceTestConfiguration {
@@ -61,7 +62,7 @@ public class DataSourceTestConfiguration {
      * 
      * @return {@link DataSource} test object.
      */
-    @Lazy
+
     @Bean("dataSource")
     @Profile(value = { "test-dao" })
     public DataSource dataSource() {
@@ -79,7 +80,6 @@ public class DataSourceTestConfiguration {
      * 
      * @return {@link JdbcTemplate} test object.
      */
-    @Lazy
     @Bean("jdbcTemplate")
     @DependsOn("dataSource")
     @Profile(value = { "test-dao" })
