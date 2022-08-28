@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -60,6 +61,7 @@ public class DataSourceTestConfiguration {
      * 
      * @return {@link DataSource} test object.
      */
+    @Lazy
     @Bean("dataSource")
     @Profile(value = { "test-dao" })
     public DataSource dataSource() {
@@ -77,6 +79,7 @@ public class DataSourceTestConfiguration {
      * 
      * @return {@link JdbcTemplate} test object.
      */
+    @Lazy
     @Bean("jdbcTemplate")
     @DependsOn("dataSource")
     @Profile(value = { "test-dao" })
