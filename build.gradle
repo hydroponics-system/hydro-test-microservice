@@ -7,7 +7,9 @@ buildscript {
 		json_web_token_version = '0.2'
 		aspect_tools_version = '1.9.7'
 		elsql_version = '1.2'
+
 		hydro_common_microservice = '1.3.9'
+		hydro_sql_microservice = '1.3.0'
     }
 }
 
@@ -43,6 +45,7 @@ dependencies {
 	implementation "io.swagger.core.v3:swagger-annotations:${swagger_version}"
 	implementation "org.springdoc:springdoc-openapi-ui:${spring_doc_openapi_version}"
 	implementation "com.github.hydroponics-system:hydro-common-microservice:v${hydro_common_microservice}"
+	implementation "com.github.hydroponics-system:hydro-sql-microservice:v${hydro_sql_microservice}"
 
 	implementation "org.springframework.boot:spring-boot-starter-test"
 }
