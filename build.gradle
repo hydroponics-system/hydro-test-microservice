@@ -19,7 +19,7 @@ plugins {
 	id "java"
 }
 
-group = 'com.hydro.common'
+group = 'com.hydro.test'
 
 repositories {
 	mavenCentral()
