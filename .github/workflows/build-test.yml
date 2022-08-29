@@ -1,6 +1,6 @@
 # Build Test Microservice on push to master and branch from master.
 
-name: Build Production
+name: Test Library Build
 
 on:
   push:
