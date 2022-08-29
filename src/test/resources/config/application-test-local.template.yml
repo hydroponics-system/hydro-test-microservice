@@ -6,11 +6,3 @@ spring:
 
 security:
   signing-key: "test-local-key"
-
-junit:
-  jupiter:
-    execution:
-      parallel:
-        enabled: true
-        mode:
-          default: concurrent
